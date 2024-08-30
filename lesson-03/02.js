@@ -1,4 +1,7 @@
 // Разработайте функцию isEven, которая определяет, чётное ли число.
 // Функция должна возвращать true, если число чётное, и false — в противном случае
 
-function isEven() {}
+function isEven(num1) {
+  return num1 % 2 === 0 ? true : false;
+}
+isEven(2);
