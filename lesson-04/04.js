@@ -14,7 +14,7 @@
 
 function doubleEachCharacter(str) {
   let string = "";
-  for (i = o; i < str.length; i++) {
+  for (i = 0; i < str.length; i++) {
     string = string + str[i] + str[i];
   }
   return string;
