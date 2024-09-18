@@ -20,9 +20,10 @@ const game = {
     for (const key in currentResourse) {
       if (resource === key) {
         return (currentResourse[key] += amount);
+      } else {
+        return "Invalid resource"
       }
     }
-    return "Invalid resource";
   },
 };
 console.log(game.addResource("gold", 100));
