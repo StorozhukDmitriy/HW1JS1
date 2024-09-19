@@ -22,8 +22,9 @@ const game = {
         return (currentResourse[key] += amount);
       }
     }
-    return "Invalid resource";
+    console.log("Invalid resource");
   },
 };
 console.log(game.addResource("lumber", 1000));
-console.log(game.addResource("lumbe", 1000));
+game.addResource("gold", 200);
+
