@@ -40,8 +40,11 @@ function updateGallery(object, picture, newInfo) {
     if (key === picture) {
       return (gallery[key] = newInfo);
     } else {
-      return (gallery[picture] = newInfo);
+      return (gallery.picture = newInfo);
     }
   }
 }
 
+updateGallery(gallery, "Mona Lisa", "Leonardo da Vinci, 1503-1506");
+updateGallery(gallery, "The Persistence of Memory", "Salvador Dali");
+console.log(gallery);
