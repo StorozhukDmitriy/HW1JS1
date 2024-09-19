@@ -36,12 +36,10 @@ const gallery = {
 };
 
 function updateGallery(object, picture, newInfo) {
-  for (const key in object) {
-    if (key === picture) {
-      return (gallery[key] = newInfo);
-    } else {
-      return (gallery.picture = newInfo);
-    }
+  if(gallery.hasOwnProperty(picture)){
+    return object[picture] = newInfo;
+  } else {
+    return object.picture = newInfo;
   }
 }
 
