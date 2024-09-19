@@ -25,4 +25,5 @@ const game = {
     return "Invalid resource";
   },
 };
-console.log(game.addResource("lumbe", 100));
+console.log(game.addResource("lumber", 1000));
+console.log(game.addResource("lumbe", 1000));
