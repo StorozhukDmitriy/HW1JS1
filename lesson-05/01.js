@@ -22,8 +22,8 @@ const game = {
         properyResources[key] = properyResources[key] + amount;
         return properyResources[key];
       }
+      return "Invalid resource";
     }
-    return "Invalid resource";
   },
 };
 
