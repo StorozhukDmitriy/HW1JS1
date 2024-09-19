@@ -39,10 +39,7 @@ function updateGallery(object, picture, newInfo) {
   if(gallery.hasOwnProperty(picture)){
     return object[picture] = newInfo;
   } else {
-    return object.picture = newInfo;
-  }
+    return object[picture] = newInfo;
+}
 }
 
-updateGallery(gallery, "Mona Lisa", "Leonardo da Vinci, 1503-1506");
-updateGallery(gallery, "The Persistence of Memory", "Salvador Dali");
-console.log(gallery);
