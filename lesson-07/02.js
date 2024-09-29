@@ -6,14 +6,14 @@
 function isNumeric(str) {
   const str1 = new Array(str);
   for (i = 0; i < str1.length; i++) {
-    if (isNaN(str1[i])) {
+    if (isNaN(str1[i]) || str1[i] === " ") {
       return false;
     } else {
       return true;
     }
   }
 }
-console.log(isNumeric("123abc"));
+console.log(isNumeric(" "));
 
 // console.log(isNumeric("123")) // Ожидаемый результат: true
 // console.log(isNumeric("12.3")) // Ожидаемый результат: true
