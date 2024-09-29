@@ -12,4 +12,5 @@
 function truncate(str, maxLength) {
   return str.length > maxLength ? str.slice(0, maxLength) + "..." : str;
 }
-
+truncate("Вот, что мне действительно нравится в этом", 20);
+console.log(truncate("Вот, что мне действительно нравится в этом", 20));
