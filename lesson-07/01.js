@@ -6,4 +6,6 @@
   Другой вариант - использовать метод split строк, и метод массива join.
 */
 
-function capitalizeWords() {}
+function capitalizeWords(str) {
+  return str.replace(/\b\w/g, (c) => c.toUpperCase());
+}
