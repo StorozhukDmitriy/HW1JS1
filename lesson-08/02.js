@@ -33,10 +33,11 @@ let isTimerStarted = false;
 let timerId = null;
 
 startButton.addEventListener("click", () => {
+  let counter = 3;
   if (!isTimerStarted) {
     isTimerStarted = true;
-    let counter = 3;
     timerId = setInterval(() => {
+      countdownDisplay.textContent = counter;
       if (counter > 0) {
         countdownDisplay.textContent = counter;
         counter--;
@@ -47,6 +48,9 @@ startButton.addEventListener("click", () => {
       }
       // countdownDisplay.textContent = "";
     }, 1000);
+  } else {
+    clearInterval(timerId);
+    countdownDisplay.textContent = "";
   }
 });
 
