@@ -37,10 +37,10 @@ startButton.addEventListener("click", () => {
     isTimerStarted = true;
     let counter = 3;
     timerId = setInterval(() => {
+      countdownDisplay.textContent = counter;
       if (counter > 0) {
-        countdownDisplay.textContent = counter;
-        console.log(counter);
         counter--;
+        console.log(counter);
       } else if (counter === 0) {
         countdownDisplay.textContent = "🚀";
       }
