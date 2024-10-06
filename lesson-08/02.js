@@ -43,6 +43,8 @@ startButton.addEventListener("click", () => {
         counter--;
       } else if (counter === 0) {
         countdownDisplay.textContent = "🚀";
+        console.log(counter);
+        isTimerStarted = false;
       }
     }, 1000);
   }
