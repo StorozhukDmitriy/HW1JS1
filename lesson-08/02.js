@@ -86,9 +86,7 @@ startButton.addEventListener("click", () => {
       if (counter === 0) {
         console.log(counter);
         clearInterval(timerId);
-        return (countdownDisplay.textContent = "🚀");
-      } else if (counter < 0) {
-        clearInterval(timerId);
+        countdownDisplay.textContent = "🚀";
       }
     }, 1000);
   } else {
