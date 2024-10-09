@@ -25,6 +25,49 @@
 - 🧙‍♂️ Для выполнения этого задания нужно познакомиться с браузерными функциями setInterval (https://doka.guide/js/setinterval/) и clearInterval(https://doka.guide/js/clearinterval/). Они очень похоже на setTimeout и clearTimeout.
  */
 
+// const startButton = document.getElementById("start");
+// const cancelButton = document.getElementById("cancel");
+// const countdownDisplay = document.getElementById("countdown");
+
+// let isTimerStarted = false;
+// let timerId = null;
+
+// startButton.addEventListener("click", () => {
+//   let counter = 3;
+//   if (!isTimerStarted) {
+//     isTimerStarted = true;
+//     // countdownDisplay.textContent = counter;
+//     timerId = setInterval(() => {
+//       if (counter === 3) {
+//         countdownDisplay.textContent = counter;
+//         counter--;
+//       } else if (counter === 2) {
+//         countdownDisplay.textContent = counter;
+//         counter--;
+//       } else if (counter === 1) {
+//         countdownDisplay.textContent = counter;
+//         counter--;
+//       } else if (counter === 0) {
+//         countdownDisplay.textContent = "🚀";
+//         isTimerStarted = false;
+//         clearInterval(timerId);
+//       }
+//     }, 1000);
+//   } else {
+//     countdownDisplay.textContent = "";
+//     clearInterval(timerId);
+//     isTimerStarted = false;
+//   }
+// });
+
+// cancelButton.addEventListener("click", () => {
+//   if (isTimerStarted) {
+//     isTimerStarted = false;
+//     clearInterval(timerId);
+//     countdownDisplay.textContent = "Отменено";
+//   }
+// });
+
 const startButton = document.getElementById("start");
 const cancelButton = document.getElementById("cancel");
 const countdownDisplay = document.getElementById("countdown");
@@ -36,27 +79,17 @@ startButton.addEventListener("click", () => {
   let counter = 3;
   if (!isTimerStarted) {
     isTimerStarted = true;
-    // countdownDisplay.textContent = counter;
+    countdownDisplay.textContent = counter;
     timerId = setInterval(() => {
-      if (counter === 3) {
-        countdownDisplay.textContent = counter;
-        counter--;
-      } else if (counter === 2) {
-        countdownDisplay.textContent = counter;
-        counter--;
-      } else if (counter === 1) {
-        countdownDisplay.textContent = counter;
-        counter--;
-      } else if (counter === 0) {
-        countdownDisplay.textContent = "🚀";
+      counter--;
+      countdownDisplay.textContent = counter;
+      if (counter === 0) {
         isTimerStarted = false;
-        clearInterval(timerId);
+        return (countdownDisplay.textContent = "🚀");
       }
     }, 1000);
   } else {
-    countdownDisplay.textContent = "";
     clearInterval(timerId);
-    isTimerStarted = false;
   }
 });
 
