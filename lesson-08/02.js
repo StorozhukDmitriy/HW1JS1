@@ -36,9 +36,10 @@ startButton.addEventListener("click", () => {
   let counter = 3;
   if (!isTimerStarted) {
     isTimerStarted = true;
-    countdownDisplay.textContent = counter;
+    // countdownDisplay.textContent = counter;
     timerId = setInterval(() => {
       if (counter === 3) {
+        countdownDisplay.textContent = counter;
         counter--;
       } else if (counter === 2) {
         countdownDisplay.textContent = counter;
@@ -48,12 +49,14 @@ startButton.addEventListener("click", () => {
         counter--;
       } else if (counter === 0) {
         countdownDisplay.textContent = "🚀";
+        isTimerStarted = false;
         clearInterval(timerId);
       }
     }, 1000);
   } else {
     countdownDisplay.textContent = "";
     clearInterval(timerId);
+    isTimerStarted = false;
   }
 });
 
