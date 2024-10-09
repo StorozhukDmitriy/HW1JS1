@@ -84,11 +84,13 @@ startButton.addEventListener("click", () => {
       counter--;
       countdownDisplay.textContent = counter;
       if (counter <= 0) {
+        console.log(counter);
+        clearInterval(timerId);
         return (countdownDisplay.textContent = "🚀");
       }
     }, 1000);
   } else {
-    clearInterval(timerId);
+    isTimerStarted = false;
   }
 });
 
