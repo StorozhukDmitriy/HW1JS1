@@ -24,15 +24,20 @@ console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
 
 const arr = [1, 2, 3, 4, 5];
+const arr2 = [];
 const filter = (array, callback) => {
   for (let i = 0; i < array.length; i++) {
     const element = array[i];
     const index = i;
     callback(element, index);
   }
+  return arr2;
 };
 const callbackk = (element, index) => {
-  console.log(element, index);
+  if (index % 2 === 0) {
+    return arr2.push(element);
+  }
 };
 
-filter(arr, callbackk)
+
+console.log(filter(arr, callbackk));
