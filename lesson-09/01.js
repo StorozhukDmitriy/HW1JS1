@@ -26,7 +26,7 @@ console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 const numbers = [1, 2, 3, 4, 5];
 //функция фильтр
 const arr = [];
-const oddNumbers = (numbers, callback) => {
+const filter = (numbers, callback) => {
   for (let i = 0; i < numbers.length; i++) {
     const element = numbers[i];
     const index = i;
@@ -36,11 +36,11 @@ const oddNumbers = (numbers, callback) => {
 };
 const callback = (element, index) => {
   if (index % 2 === 0) {
-   return arr.push(element);
+    return arr.push(element);
   }
 };
 
-console.log(oddNumbers(numbers, callback)); // Должен вывести: [1, 3, 5]
+console.log(filter(numbers, callback)); // Должен вывести: [1, 3, 5]
 
 // const arr = [1, 2, 3, 4, 5];
 // const arr3 = ["cat", "sheep", "dog", "wolf", "dragon"];
