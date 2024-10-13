@@ -37,12 +37,12 @@ const filter = (array, callback) => {
 const callbackk = (element, index) => {
   if (typeof element === "number") {
     if (index % 2 === 0) {
-      return arr2.push(element);
+      arr2.push(element);
     }
   } else if (typeof element === "string") {
     if (element.length > 3) {
-      return arr2.push(element);
+      arr2.push(element);
     }
   }
 };
-console.log(filter(arr3, callbackk));
+console.log(filter(array, callbackk));
