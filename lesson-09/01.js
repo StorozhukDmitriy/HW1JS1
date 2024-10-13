@@ -65,4 +65,4 @@ const callbackk = (element, index) => {
   }
 };
 
-console.log(filter(arr, callbackk));
+
