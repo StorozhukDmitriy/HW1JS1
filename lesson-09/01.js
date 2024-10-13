@@ -23,7 +23,27 @@ const oddNumbers = filter(numbers, (element, index) => {
 console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
 
+// const arr = [1, 2, 3, 4, 5];
+// const arr3 = ["cat", "sheep", "dog", "wolf", "dragon"];
+// const arr2 = [];
+// const filter = (array, callback) => {
+//   for (let i = 0; i < array.length; i++) {
+//     const element = array[i];
+//     const index = i;
+//     callback(element, index);
+//   }
+//   return arr2;
+// };
+// const callbackk = (element, index) => {
+//   if (element % 2 !== 0) {
+//     return arr2.push[index];
+//   }
+// };
+
+// console.log(filter(arr, callbackk));
+
 const arr = [1, 2, 3, 4, 5];
+const arr3 = ["cat", "sheep", "dog", "wolf", "dragon"];
 const arr2 = [];
 const filter = (array, callback) => {
   for (let i = 0; i < array.length; i++) {
@@ -34,10 +54,15 @@ const filter = (array, callback) => {
   return arr2;
 };
 const callbackk = (element, index) => {
-  if (index % 2 === 0) {
-    return arr2.push(element);
+  if (typeof element === "number") {
+    if (index % 2 === 0) {
+      return arr2.push(element);
+    }
+  } else if (typeof element === "string") {
+    if (element.length > 3) {
+      return arr2.push(element);
+    }
   }
 };
-
 
 console.log(filter(arr, callbackk));
