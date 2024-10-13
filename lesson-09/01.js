@@ -45,4 +45,4 @@ const callbackk = (element, index) => {
     }
   }
 };
-console.log(filter(array, callback));
+
