@@ -26,6 +26,7 @@ console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 const arr = [1, 2, 3, 4, 5];
 const arr3 = ["cat", "sheep", "dog", "wolf", "dragon"];
 const arr2 = [];
+const arr4 = [];
 const filter = (array, callback) => {
   for (let i = 0; i < array.length; i++) {
     const element = array[i];
@@ -33,16 +34,19 @@ const filter = (array, callback) => {
     callback(element, index);
   }
   return arr2;
+
 };
 const callbackk = (element, index) => {
   if (typeof element === "number") {
     if (index % 2 === 0) {
       arr2.push(element);
     }
-  } else if (typeof element === "string") {
+  } else if (!isNaN(element)) {
     if (element.length > 3) {
-      arr2.push(element);
+     arr2.push(element);
     }
   }
 };
+console.log(filter(arr,callbackk));
+console.log(filter(arr3,callbackk));
 
