@@ -24,6 +24,7 @@ const doubledNumbers = map(numbers, (element, index) => {
 console.log(doubledNumbers) // Должен вывести: [2, 4, 6, 8, 10]
 */
 const numbers = [1, 2, 3, 4, 5];
+const string = ["a", "b", "c"];
 const result = [];
 const map = (array, callback) => {
   for (let i = 0; i < array.length; i++) {
@@ -31,9 +32,12 @@ const map = (array, callback) => {
     const index = i;
     callback(element, index);
   }
-  return result
+  return result;
 };
 const callback = (element, index) => {
-  return result.push(element * 2);
+  if (!isNaN(element)) {
+    return result.push(element * 2);
+  } else {
+    return result.push(element + index);
+  }
 };
-console.log(map(numbers, callback));
