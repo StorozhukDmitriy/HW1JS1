@@ -27,6 +27,7 @@ const numbers = [1, 2, 3, 4, 5];
 const string = ["a", "b", "c"];
 const result = [];
 const result2 = [];
+const result3 = [];
 const map = (array, callback) => {
   for (let i = 0; i < array.length; i++) {
     const element = array[i];
@@ -36,6 +37,8 @@ const map = (array, callback) => {
 
   if (typeof array[0] === "number") {
     return result;
+  } else if (array.length === 0) {
+    return result3;
   } else {
     return result2;
   }
@@ -50,3 +53,4 @@ const callback = (element, index) => {
 
 console.log(map(numbers, callback));
 console.log(map(string, callback));
+console.log(map([], callback));
